@@ -1,6 +1,6 @@
 # Reproducible Research: Peer Assessment 1
 
-
+```
 ## Loading and preprocessing the data
 # unzipping the archive that should be present in your working directory 
 unzip("activity.zip")
@@ -19,7 +19,9 @@ medianstep #10395
 dailypat <- tapply(activity$steps, list(activity$interval), mean, na.rm=T)
 dailypat
 # making the plot
+r plot, fig.width=4, fig.height=3, message=F}
 plot(1:length(unique(activity$interval)), dailypat, type="l", xlab="Interval", ylab="Mean number of steps", main="Daily activity pattern")
+
 # finding which interval is the most active
 mostactive <- which.max(dailypat)
 names(mostactive) # 835
@@ -30,3 +32,4 @@ names(mostactive) # 835
 # all of the sections!
 
 ## Are there differences in activity patterns between weekdays and weekends?
+```
